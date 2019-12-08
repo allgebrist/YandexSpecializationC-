@@ -20,8 +20,7 @@ vector<string> words = {"hey", "hi"};
 words.clear();
 // Теперь вектор words пуст
 */
-void MoveStrings( vector<string>& source, 
-						   							vector<string>& destination ) {
+void MoveStrings(vector<string>& source, vector<string>& destination) {
 	for (auto s : source) {
 		destination.push_back(s);
 	}
