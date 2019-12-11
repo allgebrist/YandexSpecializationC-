@@ -58,9 +58,12 @@ int main() {
 		string s1, s2;
 		cin >> s1 >> s2;
 
+		// Простое решение
 		map<char, int> counter1 = BuildCharCounters(s1);
 		map<char, int> counter2 = BuildCharCounters(s2);
+		(counter1 == counter2) ? cout << "YES" : cout << "NO";
 
+		/*
 		bool flag = true;
 		for (auto x : counter1) {
 			if (x.second != counter2[x.first]) {
@@ -70,6 +73,7 @@ int main() {
 		}
 		(flag && counter1.size() == counter2.size()) ? cout << "YES" : cout << "NO";
 		cout << endl;
+		*/
 	}
 	
 	return 0;
