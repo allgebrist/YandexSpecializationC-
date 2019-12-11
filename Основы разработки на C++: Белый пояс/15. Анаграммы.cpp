@@ -38,7 +38,7 @@ using namespace std;
 эти слова являются анаграммами, и NO в противном случае.
 */
 
-map<char, int> BuildCharCounters(string s) {
+map<char, int> BuildCharCounters(string& s) {
 	map<char, int> counter;
 	for (char c : s) {
 		counter[c]++;
