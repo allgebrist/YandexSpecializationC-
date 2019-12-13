@@ -120,7 +120,7 @@ int main() {
 			if (all_capitals.size() == 0) {
 				cout << "There are no countries in the world" << endl;
 			} else {
-				for (auto x : all_capitals) {
+				for (const auto& x : all_capitals) {
 					cout << x.first << "/" << x.second << " ";
 				}
 				cout << endl;
