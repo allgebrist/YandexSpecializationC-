@@ -89,17 +89,14 @@ int main() {
 			string old_country_name, new_country_name;
 			cin >> old_country_name >> new_country_name;
 			bool admissible = true;
-			if (all_capitals.find(old_country_name) == all_capitals.end()) {
+			if (   all_capitals.find(old_country_name) == all_capitals.end()
+				|| all_capitals.find(new_country_name) != all_capitals.end()
+				|| old_country_name == new_country_name   ) {
 				// страна old_country_name не существует
-				admissible = false;
-			} else if (all_capitals.find(new_country_name) != all_capitals.end()) {
 				// страна new_country_name уже существует
-				admissible = false;
-			} else if (old_country_name == new_country_name) {
 				// новое название страны совпадает со старым
 				admissible = false;
 			}
-
 			if (admissible) {
 				cout << "Country " << old_country_name << " with capital " << all_capitals[old_country_name] << " has been renamed to " << new_country_name << endl;
 				string old_capital = all_capitals[old_country_name];
